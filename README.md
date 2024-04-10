@@ -1,6 +1,6 @@
 # CS434
 # Tasks
-## Create a model that can clasify an origin of web traffic ( NO ACSESS TO URL OR ENCRYPTED Payloads)
+## Create a model that can clasify an origin of web traffic ( NO ACCSESTO URL OR ENCRYPTED Payloads)
 ### TO DO  
 Look into classic classification models, such as Support Vector Machines (SVM), Decision Trees, and Convolutional Neural Networks (CNNs), basic neural netrowks 
 play with wireshark
