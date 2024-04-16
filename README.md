@@ -7,4 +7,6 @@ Look into classic classification models, such as Support Vector Machines (SVM), 
 play with wireshark
 Data collection through public data sets, or manually 
 
-     
+# Resources
+
+Dataset: [Kaggle | IP Network Traffic 75 Apps](https://www.kaggle.com/datasets/jsrojas/ip-network-traffic-flows-labeled-with-87-apps), ~500MB zip, 1.7GB .csv
