@@ -2,6 +2,9 @@
 .venv
 
 archive/Dataset*
+archive/*.csv
+
+*.pth
 
 *.pyc
 __pycache__/
