@@ -2,3 +2,13 @@
 .venv
 
 archive/Dataset*
+
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.pyi
+*.pyz
+*.pyw
+*.pyz
+*.pyw
