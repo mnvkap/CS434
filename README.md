@@ -13,3 +13,5 @@ Data collection through public data sets, or manually
 I made the SVM changes to the quinn_SVM branch in file data_processing_svm.ipynb, the changes made to data_processing.ipynb should be ignored lol
 
 Dataset: [Kaggle | IP Network Traffic 75 Apps](https://www.kaggle.com/datasets/jsrojas/ip-network-traffic-flows-labeled-with-87-apps), ~500MB zip, 1.7GB .csv
+
+Google Slides: https://docs.google.com/presentation/d/14jlBf4B8tAYa14DnfiofVk3XQTyKmn39rAhvYIKLEZI/edit?usp=sharing
