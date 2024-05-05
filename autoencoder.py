@@ -319,3 +319,15 @@ class ConvClassifier(nn.Module):
                 print("Evaluating on validation set...")
                 val_loss = self._evaluate_dl(val_dataloader, criterion)
                 print(f"Validation Loss: {val_loss / len(val_dataloader):.3f}")
+
+
+if __name__ == "__main__":
+    # Use torchviz to visualize the model 'Classifier'
+    from torchviz import make_dot
+
+    model = Classifier()
+    x = torch.randn(1, 80).to(model.device)
+    y = model(x)
+    dot = make_dot(y, params=dict(model.named_parameters())).render(
+        "DNN Classifier", format="png"
+    )
