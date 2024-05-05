@@ -116,6 +116,18 @@ class Classifier(nn.Module):
     def forward(self, x):
         return self.model(x)
 
+    def predict(self, dataloader):
+        """Predict the labels for the dataloader."""
+        predictions = []
+        model.eval()
+        with torch.no_grad():
+            for inputs, _ in dataloader:
+                inputs = inputs.to(self.device)
+                outputs = self(inputs)
+                _, preds = torch.max(outputs, 1)
+                predictions.extend(preds.cpu().numpy())
+        return predictions
+
     def confusion_matrix(self, dataloader):
         """Generate a confusion matrix for the dataloader."""
         conf_matrix = torch.zeros(
