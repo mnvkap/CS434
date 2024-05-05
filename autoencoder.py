@@ -116,6 +116,20 @@ class Classifier(nn.Module):
     def forward(self, x):
         return self.model(x)
 
+    def confusion_matrix(self, dataloader):
+        """Generate a confusion matrix for the dataloader."""
+        conf_matrix = torch.zeros(
+            17, 17, dtype=torch.int64
+        )  # Assuming num_labels is 17
+        with torch.no_grad():
+            for inputs, labels in dataloader:
+                inputs, labels = inputs.to(self.device), labels.to(self.device)
+                outputs = self(inputs)
+                _, preds = torch.max(outputs, 1)
+                for t, p in zip(labels.view(-1), preds.view(-1)):
+                    conf_matrix[t.long(), p.long()] += 1
+        return conf_matrix
+
     def _evaluate_dl(self, dataloader, criterion):
         running_loss = 0.0
         with torch.no_grad():
